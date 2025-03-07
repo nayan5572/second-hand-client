@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, User, PlusIcon, LogOut, UserRound } from "lucide-react";
+import { Menu, X, User, LogOut, UserRound } from "lucide-react";
 // import logo from "../../app/assets/logo.png";
 // import Image from "next/image";
 import Link from "next/link";
 import { useUser } from "@/context/UserContext";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { logout } from "@/services/AuthService";
 import { protectedRoutes } from "@/constant";
 import { usePathname, useRouter } from "next/navigation";
+import { logout } from "@/services/AuthService";
 
 const navbarItem = [
   {
@@ -100,8 +100,8 @@ const Navbar = () => {
         {user?.email ? (
           <>
             <Link href="/dashboard/listing/add-ads">
-              <Button className="hidden md:flex items-center gap-2  px-6 py-2 rounded-lg font-medium bg-gradient-to-r text-white from-[#537cd9] to-[#6d90df] hover:from-[#3a5eb4] hover:to-[#537cd9] transition-all">
-                Post Your Ad <PlusIcon />
+              <Button className="hidden md:flex items-center gap-2  px-6 py-2 rounded-lg font-medium bg-gradient-to-r text-[#673500] from-[#FFC800] to-[#FFC800]">
+                Post Free Add
               </Button>
             </Link>
 
@@ -118,20 +118,20 @@ const Navbar = () => {
                 <div className="py-2">
                   <Link
                     href={`/dashboard/listing/add-ads`}
-                    className="block text-white font-medium px-4 py-3 hover:bg-[#f8fafd]"
+                    className="block text-black font-medium px-4 py-3 hover:bg-[#f8fafd]"
                   >
                     <span>Post Your Ads</span>
                   </Link>
                   <Link
                     href={`/dashboard/listing`}
-                    className="block text-white font-medium px-4 py-3 hover:bg-[#f8fafd]"
+                    className="block text-black font-medium px-4 py-3 hover:bg-[#f8fafd]"
                   >
                     <span>My Ads</span>
                   </Link>
                   {user.role === "admin" && (
                     <Link
                       href={`/dashboard/admin/user-management`}
-                      className="block text-white font-medium px-4 py-3 hover:bg-[#f8fafd]"
+                      className="block text-black font-medium px-4 py-3 hover:bg-[#f8fafd]"
                     >
                       <span>User Management</span>
                     </Link>
@@ -139,14 +139,14 @@ const Navbar = () => {
                   {user.role === "admin" && (
                     <Link
                       href={`/dashboard/admin/listings`}
-                      className="block text-white font-medium px-4 py-3 hover:bg-[#f8fafd]"
+                      className="block text-black font-medium px-4 py-3 hover:bg-[#f8fafd]"
                     >
                       <span>Listings Management</span>
                     </Link>
                   )}
                   <Link
                     href={`/messages`}
-                    className="block text-white font-medium px-4 py-3 hover:bg-[#f8fafd]"
+                    className="block text-black font-medium px-4 py-3 hover:bg-[#f8fafd]"
                   >
                     <span>Message</span>
                   </Link>
@@ -178,7 +178,7 @@ const Navbar = () => {
                     <Link
                       href="#"
                       onClick={handleLogOut}
-                      className="flex gap-5 font-medium px-4 py-3 hover:bg-[#f8fafd]"
+                      className="flex gap-5 font-medium px-4 py-3 text-black"
                     >
                       <LogOut /> <span>Log Out</span>
                     </Link>

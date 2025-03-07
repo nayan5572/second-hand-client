@@ -17,6 +17,7 @@ interface LoginFormProps {
 
 import ForgetPassModal from "@/components/ui/core/SHModel/ForgetPassModal";
 import SuccessModal from "@/components/ui/core/SHModel/SuccessMessage";
+import { Button } from "@/components/ui/button";
 
 const LoginForm = ({ query }: LoginFormProps) => {
   const router = useRouter();
@@ -29,6 +30,7 @@ const LoginForm = ({ query }: LoginFormProps) => {
   const redirect = Array.isArray(query?.redirectPath)
     ? query?.redirectPath[0]
     : query?.redirectPath;
+
   const handleFormSubmit = async (data: FieldValues) => {
     try {
       const res = await loginUser(data);
@@ -50,6 +52,8 @@ const LoginForm = ({ query }: LoginFormProps) => {
       );
     }
   };
+
+  // className={`${styles.banner} relative w-full h-screen flex flex-col items-center justify-center text-center bg-cover bg-center`}
 
   return (
     <div
@@ -84,12 +88,12 @@ const LoginForm = ({ query }: LoginFormProps) => {
             </button>
           </div>
 
-          <button
+          <Button
             type="submit"
             className="w-full py-2 text-white bg-gradient-to-r from-[#537cd9] to-[#6d90df] hover:from-[#3a5eb4] hover:to-[#537cd9] rounded-lg"
           >
             Login
-          </button>
+          </Button>
         </SHForm>
         <p className="text-sm text-gray-600 text-center my-3">
           Do not have an account ?
