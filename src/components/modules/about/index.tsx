@@ -11,7 +11,7 @@ const AboutUs = () => {
           <Image src={about} alt="About Us" className="rounded-lg shadow-md" />
         </div>
         <div className="md:w-1/2 md:pl-10 mt-6 md:mt-0 text-[#374b5c]">
-          <button className="bg-gradient-to-r text-white from-[#537cd9] to-[#6d90df] px-4 py-1 rounded-md text-sm">
+          <button className="bg-gradient-to-r text-white from-[#149777] to-[#149777] px-4 py-1 rounded-md text-sm">
             About Us
           </button>
           <h2 className="text-3xl font-bold mt-4">
@@ -35,7 +35,7 @@ const AboutUs = () => {
             Our vision is to reduce E-Waste and generate a healthy, sustainable
             marketplace.
           </p>
-          <button className="mt-6 bg-gradient-to-r text-white from-[#537cd9] to-[#6d90df] px-6 py-2 gap-5 rounded-lg flex items-center hover:from-[#3a5eb4] hover:to-[#537cd9]">
+          <button className="mt-6 bg-gradient-to-r text-white from-[#149777] to-[#149777] px-6 py-2 gap-5 rounded-lg flex items-center hover:from-[#10846F] hover:to-[#10846F]">
             <span>Explore listings</span> <MoveRight />
           </button>
         </div>

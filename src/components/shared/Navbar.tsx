@@ -18,12 +18,12 @@ const navbarItem = [
     href: "/",
   },
   {
-    name: "Products",
-    href: "/products",
-  },
-  {
     name: "About",
     href: "/about-us",
+  },
+  {
+    name: "Products",
+    href: "/products",
   },
   {
     name: "Contact",
