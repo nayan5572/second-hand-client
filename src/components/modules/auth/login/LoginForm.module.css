@@ -5,3 +5,6 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.custom-shadow {
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}

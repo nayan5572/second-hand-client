@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import { Menu, X, User, LogOut, UserRound } from "lucide-react";
-// import logo from "../../app/assets/logo.png";
-// import Image from "next/image";
 import Link from "next/link";
 import { useUser } from "@/context/UserContext";
 import { Button } from "../ui/button";
