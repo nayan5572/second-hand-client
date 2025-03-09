@@ -1,19 +1,21 @@
 "use client";
-import styles from "../login/LoginForm.module.css";
-import Link from "next/link";
-import SHForm from "@/components/ui/core/form/SHForm";
-import SHInput from "@/components/ui/core/form/SHInput";
+import { useState } from "react";
 import { FieldValues } from "react-hook-form";
 import { registerUser } from "@/services/AuthService";
 import { useUser } from "@/context/UserContext";
-import { useState } from "react";
+import Link from "next/link";
+import SHForm from "@/components/ui/core/form/SHForm";
+import SHInput from "@/components/ui/core/form/SHInput";
 import SuccessModal from "@/components/ui/core/SHModel/SuccessMessage";
+import { motion } from "framer-motion";
+import { FiUser, FiMail, FiPhone, FiLock } from "react-icons/fi";
 
 const RegisterForm = () => {
   const { setIsLoading } = useUser();
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const [modalContent, setModalContent] = useState("");
   const [modalState, setModalState] = useState("");
+
   const handleFormSubmit = async (data: FieldValues) => {
     try {
       const res = await registerUser(data);
@@ -22,7 +24,7 @@ const RegisterForm = () => {
         setIsConfirmOpen(true);
         setModalState("success");
         setModalContent(
-          "You have successfully register, Please check your mail and verify your account."
+          "You have successfully registered. Please check your mail to verify your account."
         );
       } else {
         setIsConfirmOpen(true);
@@ -41,58 +43,59 @@ const RegisterForm = () => {
   };
 
   return (
-    <div
-      className={`${styles.banner} relative w-full h-screen flex flex-col items-center justify-center text-center bg-cover bg-center`}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-[2px]"></div>
-
-      <div className="relative z-10 w-full max-w-md p-6 bg-[#fdfdfe] rounded-lg shadow-lg">
-        <div className="py-5">
-          <h1 className="text-xl font-semibold">Registration</h1>
-          <p className="font-extralight text-sm text-gray-600">
+    <div className="relative w-full h-screen flex items-center justify-center bg-gradient-to-br from-[#537cd9] via-[#6d90df] to-[#ffb300]">
+      <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-lg"></div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative z-10 w-full max-w-md p-8 bg-white/20 backdrop-blur-md rounded-2xl shadow-xl border border-white/30"
+      >
+        <div className="text-center mb-6">
+          <h1 className="text-2xl font-semibold text-white">Sign Up</h1>
+          <p className="text-white/70 text-sm">
             Join us today and start your journey!
           </p>
         </div>
         <SHForm onSubmit={handleFormSubmit}>
-          <div className="w-full border border-gray-300 rounded-lg p-2 my-3">
-            <SHInput required type="text" name="name" label="Name" />
-          </div>
-          <div className="w-full border border-gray-300 rounded-lg p-2 my-3">
-            <SHInput required type="email" name="email" label="Email" />
-          </div>
-          <div className="w-full border border-gray-300 rounded-lg p-2 my-3">
-            <SHInput required type="text" name="phoneNumber" label="Phone" />
-          </div>
-
-          <div className="w-full border border-gray-300 rounded-lg p-2 my-3">
-            <SHInput
-              required
-              type="password"
-              name="password"
-              label="Password"
-            />
-          </div>
-
-          <div className="flex justify-end items-center my-2">
-            <a href="#" className="text-[#ffb300] text-[16px]">
+          {[
+            { name: "name", type: "text", icon: <FiUser /> },
+            { name: "email", type: "email", icon: <FiMail /> },
+            { name: "phoneNumber", type: "text", icon: <FiPhone /> },
+            { name: "password", type: "password", icon: <FiLock /> },
+          ].map(({ name, type, icon }) => (
+            <div
+              key={name}
+              className="relative flex items-center border border-white/50 rounded-lg p-3 my-3 bg-white/20"
+            >
+              <span className="text-white/70 mr-2">{icon}</span>
+              <SHInput
+                required
+                type={type}
+                name={name}
+                label={name.charAt(0).toUpperCase() + name.slice(1)}
+              />
+            </div>
+          ))}
+          <div className="flex justify-end my-2">
+            <a href="#" className="text-white text-sm hover:underline">
               Forgot password?
             </a>
           </div>
-
           <button
             type="submit"
-            className="w-full py-2 text-white bg-gradient-to-r from-[#537cd9] to-[#6d90df] hover:from-[#3a5eb4] hover:to-[#537cd9] rounded-lg"
+            className="w-full py-3 text-white bg-gradient-to-r from-[#149777] to-[#149777] hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
           >
             Register
           </button>
         </SHForm>
-        <p className="text-sm text-gray-600 text-center my-3">
-          Already have an account ?
-          <Link href="/login" className="text-primary">
+        <p className="text-white text-center mt-4 text-sm">
+          Already have an account?
+          <Link href="/login" className="hover:underline ml-1">
             Login
           </Link>
         </p>
-      </div>
+      </motion.div>
       <SuccessModal
         isOpen={isConfirmOpen}
         status={modalState}

@@ -178,7 +178,7 @@ const Navbar = () => {
                       onClick={handleLogOut}
                       className="flex gap-5 font-medium px-4 py-3 text-black"
                     >
-                      <LogOut /> <span>Log Out</span>
+                      <LogOut /> <span>Sign Out</span>
                     </Link>
                   </div>
                 </div>

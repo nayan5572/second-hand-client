@@ -14,7 +14,7 @@ const ContactLocation = () => {
           </div>
           <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
           <p className="text-gray-600 text-sm leading-relaxed">
-            Sherpur - 2100, Mymonsingh - 22200, Bangladesh
+            Arjatpara, Mohakhali, Dhaka
           </p>
         </div>
 

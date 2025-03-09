@@ -16,38 +16,38 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Tasneema Jahan",
+    name: "Mark Zukerburg",
     title: "Project Co-ordinator",
     testimonial:
-      "I have sold my Poco M2 Pro mobile set in the PuronoBazar platform. With the help of PuronoBazar online platform, I have sold it without any hassle. Thank you so much for the assistance.",
+      "I had a fantastic experience using this marketplace! The product was exactly as described, and the seller was very responsive. Smooth transaction and great value for money. Highly recommend!",
     rating: 5,
   },
   {
-    name: "MD. Al-amin",
+    name: "Bil Gates",
     title: "Account Executive",
     testimonial:
-      "I have sold my household furniture at a good price in the PuronoBazar platform. Their commission rate is very low. Great service. Totally satisfied. Go ahead, PuronoBazar.",
+      "I had a fantastic experience using this marketplace! The product was exactly as described, and the seller was very responsive. Smooth transaction and great value for money. Highly recommend!",
     rating: 5,
   },
   {
-    name: "MD. Maksud Khaleque",
+    name: "Mukesh Ambanee",
     title: "HR Executive",
     testimonial:
-      "I recently purchased a second-hand laptop from PuronoBazar and I am very happy with my purchase. I highly recommend PuronoBazar.",
+      "I had a fantastic experience using this marketplace! The product was exactly as described, and the seller was very responsive. Smooth transaction and great value for money. Highly recommend!",
     rating: 5,
   },
   {
-    name: "Rina Shah",
+    name: "Goutam Adani",
     title: "Marketing Manager",
     testimonial:
-      "The service was excellent! I sold my old fridge for a great price without any hassle. Highly recommend this platform.",
+      "I had a fantastic experience using this marketplace! The product was exactly as described, and the seller was very responsive. Smooth transaction and great value for money. Highly recommend!",
     rating: 4,
   },
   {
-    name: "Anik Rahman",
+    name: "Elon Musk",
     title: "Software Engineer",
     testimonial:
-      "Selling my old phone on PuronoBazar was a breeze! Great platform, low commission, and easy-to-use. Highly recommend it.",
+      "I had a fantastic experience using this marketplace! The product was exactly as described, and the seller was very responsive. Smooth transaction and great value for money. Highly recommend!",
     rating: 4,
   },
 ];
