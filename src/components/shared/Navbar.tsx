@@ -9,6 +9,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { protectedRoutes } from "@/constant";
 import { usePathname, useRouter } from "next/navigation";
 import { logout } from "@/services/AuthService";
+import logo1 from "../../app/assets/logo1.png";
+import Image from "next/image";
 
 const navbarItem = [
   {
@@ -60,13 +62,13 @@ const Navbar = () => {
             href="/"
             className="text-2xl font-bold text-white flex items-center"
           >
-            {/* <Image
-              src={logo}
+            <Image
+              src={logo1}
               alt="Logo"
-              width={200}
-              height={200}
-              className="mr-2 sm:w-auto sm:h-auto max-w-[150px] md:max-w-[200px]"
-            /> */}
+              width={40}
+              height={40}
+              className="sm:w-auto sm:h-auto max-w-[150px] md:max-w-[200px]"
+            />
             <h1>PuronoBazar</h1>
           </Link>
         </div>
