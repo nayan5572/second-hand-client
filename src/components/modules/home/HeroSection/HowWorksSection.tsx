@@ -33,7 +33,6 @@ const HowWorksSection = () => {
           </div>
         </div>
       </div>
-
       <div className="md:hidden flex flex-col items-center space-y-8">
         <div className="flex flex-col items-center">
           <Image src={postAdsImg} alt="Post ad" className="w-16 h-16" />

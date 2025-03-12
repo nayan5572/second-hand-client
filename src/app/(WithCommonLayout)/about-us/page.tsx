@@ -3,15 +3,15 @@ import HowWorksSection from "@/components/modules/home/HeroSection/HowWorksSecti
 import SellersLoveUs from "@/components/modules/home/HeroSection/StatsCardSection";
 
 const AboutUsPage = () => {
-    return (
-        <div>
-            <AboutUs />
-            <SellersLoveUs />
-            <div className="py-20">
-                <HowWorksSection />
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <AboutUs />
+      <SellersLoveUs />
+      <div className="py-20">
+        <HowWorksSection />
+      </div>
+    </div>
+  );
 };
 
 export default AboutUsPage;
