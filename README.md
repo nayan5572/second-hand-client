@@ -1,8 +1,8 @@
 # puronoBazar - Project Overview
 
-## Frontend Live Link:
+## Frontend Live Link: https://second-hand-client-zeta.vercel.app/
 
-## Backend Live Link: https://second-hand-server-seven.vercel.app/
+## Backend Live Link: https://second-hand-server-sooty.vercel.app/
 
 ## Introduction
 
