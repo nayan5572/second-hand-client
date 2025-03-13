@@ -23,9 +23,7 @@ const RegisterForm = () => {
         setIsLoading(true);
         setIsConfirmOpen(true);
         setModalState("success");
-        setModalContent(
-          "You have successfully registered. Please check your mail to verify your account."
-        );
+        setModalContent("You have successfully registered");
       } else {
         setIsConfirmOpen(true);
         setModalContent(
